@@ -1,0 +1,69 @@
+{
+  "id": "eco-dim07-z-wave",
+  "name": {
+    "en": "Dimmer Z-wave (2019)"
+  },
+  "class": "light",
+  "capabilities": [
+    "dim",
+    "onoff"
+  ],
+  "capabilitiesOptions": {
+		"onoff": {
+			"setOnDim": false
+		},
+		"dim": {
+			"opts": {
+				"duration": true
+			}
+		}
+	},
+  "energy": {
+    "approximation": {
+      "usageOn": 0,
+      "usageOff": 0
+    }
+  },
+  "images": {
+    "large": "{{driverAssetsPath}}/images/large.png",
+    "small": "{{driverAssetsPath}}/images/small.png"
+  },
+  "platforms": [ "local", "cloud" ],
+  "connectivity": [ "zwave" ],
+  "zwave": {
+    "manufacturerId": [1, 1073],
+    "productTypeId": [
+      258,514
+    ],
+    "productId": [
+      1
+    ],
+    "includeSecure": false,
+    "__comment": "Reverted back to non secure inclusion due to S2 security handshake issues",
+    "learnmode": {
+      "image": "{{driverAssetsPath}}/learnmode.svg",
+      "instruction": {
+        "en": "Wait until the LED turns off, then continue to include the dimmer:\n1. Press the RESET button twice. \nThe LED will start blinking BLUE indicating that the inclusion mode is activated.\n Once inclusion is succesfull, the LED stop blinking, turn BLUE for a few seconds and turn off",
+        "nl": "Wacht tot de LED uit is, voeg vervolgens de dimmer toe: \n1. Druk de RESET knop twee keer in. \nDe LED knippert BLAUW en de inclusion modus is ingeschakeld. \nWanneer het toevoegen succesvol is afgerond, stopt de LED met knipperen, wordt BLAUW voor enkele seconden en gaat vervolgens uit."
+      }
+    },
+    "unlearnmode": {
+      "image": "{{driverAssetsPath}}/unlearnmode.svg",
+      "instruction": {
+        "en": "First remove the dimmer by pressing the RESET button twice. \nThe LED will start blinking RED indicating that the exclusion mode is activated.\n Once removal is succesfull, the LED stop blinking, turn RED for a few seconds and turn off",
+        "nl": "Reset eerst de dimmer door twee keer de RESET knop in te drukken. \nDe LED knippert ROOD en de exclusion modus is ingeschakeld. \nWanneer het verwijderen succesvol is afgerond, stopt de LED met knipperen, wordt ROOD voor enkele seconden en gaat vervolgens uit."
+      }
+    },
+    "associationGroups": [
+      1
+    ],
+    "associationGroupsOptions": {
+      "1": {
+        "hint": {
+          "en": "Lifeline association group (do not change). The Dimmer will send Switch Multilevel Report when Dimmer state changed (Configurable).",
+          "nl": "Lifeline association group (niet aanpassen). De Dimmer stuurt Switch Multilevel Reports wanneer de toestand van de Dimmer aangepast is (instelbaar)."
+        }
+      }
+    }
+  }
+}

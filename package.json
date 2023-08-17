@@ -1,0 +1,39 @@
+{
+	"name": "nl.EcoDim",
+	"version": "1.0.0",
+	"description": "This app adds support for the [EcoDim dimmers](https://www.ecodim.nl/eco-dim07-zigbee-z-wave-smart-led-dimmer.html) sold by [EcoDim.nl](https://www.EcoDim.nl).",
+	"main": "app.js",
+	"dependencies": {
+		"homey-zigbeedriver": "^1.6.2",
+		"homey-zwavedriver": "^1.0.4",
+		"zigbee-clusters": "^1.4.0"
+	},
+	"devDependencies": {
+		"eslint": "^6.8.0",
+		"eslint-config-athom": "^2.0.8"
+	},
+	"scripts": {
+		"run": "athom app run",
+		"test": "echo \"Error: no test specified\" && exit 1",
+		"lint": "eslint .",
+		"start": "nodemon --watch . --exec \"homey app run\""
+	},
+	"nodemonConfig": {
+		"ignore": [
+			"app.json"
+		]
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/EcoDimBV/nl.EcoDim.git"
+	},
+	"author": "EcoDim.nl",
+	"license": "GPLv3",
+	"bugs": {
+		"url": "https://github.com/EcoDimBV/nl.EcoDim/issues"
+	},
+	"engines": {
+		"node": ">=12"
+	},
+	"homepage": "https://www.ecodim.nl/eco-dim07-zigbee-z-wave-smart-led-dimmer.html"
+}

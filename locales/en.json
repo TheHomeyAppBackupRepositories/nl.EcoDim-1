@@ -1,0 +1,14 @@
+{
+	"Group1": "Group 1",
+	"Group2": "Group 2",
+	"Group3": "Group 3",
+	"Group4": "Group 4",
+	"Switched ON": "Switched on",
+	"Switched OFF": "Switched off",
+	"Dimming UP": "Dimming up / Held Down (increase)",
+	"Dimming DOWN": "Dimming down / Held Down (decrease)",
+	"Dimming STOP": "Dimming stop / Released",
+	"pairing": {
+		"configuring": "Configuring..."
+	}
+}

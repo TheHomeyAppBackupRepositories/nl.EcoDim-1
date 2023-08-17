@@ -1,0 +1,86 @@
+{
+  "id": "eco-dim07.2-z-wave",
+  "name": {
+    "en": "Dimmer Z-wave"
+  },
+  "class": "light",
+  "capabilities": [
+    "dim",
+    "onoff",
+    "measure_power",
+    "meter_power"
+  ],
+  "capabilitiesOptions": {
+		"onoff": {
+			"setOnDim": false
+		},
+		"dim": {
+			"opts": {
+				"duration": true
+			}
+		},
+    "measure_power": {
+      "approximated": true
+    }
+	},
+  "images": {
+    "large": "{{driverAssetsPath}}/images/large.png",
+    "small": "{{driverAssetsPath}}/images/small.png"
+  },
+  "platforms": [ "local", "cloud" ],
+  "connectivity": [ "zwave" ],
+  "zwave": {
+    "manufacturerId": [1073],
+    "productTypeId": [
+      514
+    ],
+    "productId": [
+      2
+    ],
+    "includeSecure": false,
+    "__comment": "Reverted back to non secure inclusion due to S2 security handshake issues",
+    "learnmode": {
+      "image": "{{driverAssetsPath}}/learnmode.svg",
+      "instruction": {
+        "en": "Wait until the LED turns off, then continue to include the dimmer:\n1. Press the RESET button twice. \nThe LED will start blinking indicating that the inclusion mode is activated.\n Once inclusion is succesfull, the LED stop blinking, turn on for a few seconds and turn off",
+        "nl": "Wacht tot de LED uit is, voeg vervolgens de dimmer toe: \n1. Druk de RESET knop twee keer in. \nDe LED knippert en de inclusion modus is ingeschakeld. \nWanneer het toevoegen succesvol is afgerond, stopt de LED met knipperen, staat aan voor enkele seconden en gaat vervolgens uit."
+      }
+    },
+    "unlearnmode": {
+      "image": "{{driverAssetsPath}}/unlearnmode.svg",
+      "instruction": {
+        "en": "First remove the dimmer by pressing the RESET button twice. \nThe LED will start blinking indicating that the exclusion mode is activated.\n Once removal is succesfull, the LED stop blinking, turn on for a few seconds and turn off",
+        "nl": "Reset eerst de dimmer door twee keer de RESET knop in te drukken. \nDe LED knippert en de exclusion modus is ingeschakeld. \nWanneer het verwijderen succesvol is afgerond, stopt de LED met knipperen, staat aan voor enkele seconden en gaat vervolgens uit."
+      }
+    },
+    "associationGroups": [
+      1
+    ],
+    "associationGroupsOptions": {
+      "1": {
+        "hint": {
+          "en": "Lifeline association group (do not change). The Dimmer will send Switch Multilevel Report when Dimmer state changed (Configurable).",
+          "nl": "Lifeline association group (niet aanpassen). De Dimmer stuurt Switch Multilevel Reports wanneer de toestand van de Dimmer aangepast is (instelbaar)."
+        }
+      },
+      "2": {
+        "hint": {
+          "en": "Short press the knob turn on the dimmer Sends Basic Set(0xFF) to associated devices.",
+          "nl": "Korte druk op de knop om de dimmer in te schakelen stuurt Basic Set(0xFF) naar gekoppelde apparaten."
+        }
+      },
+      "3": {
+        "hint": {
+          "en": "“Clockwise the knob” Sends Switch Multilevel Set (to increase the brightness and keep associated devices in sync with this device) to associated devices",
+          "nl": "Draaien aan de knop stuurt Switch Multilevel Set naar de gekoppelde apparaten om helderheid in sync te houden met deze dimmer."
+        }
+      },
+      "4": {
+        "hint": {
+          "en": "External Button hold send Switch Multilevel Start Level Change (Switchover dimmer Up/Down). External Button release send Switch Multilevel Stop Level Change",
+          "nl": "Externe knop ingedrukt houden stuurt Switch Multilevel Start Level Change (Dimmer Up/Down). Externe knop loslaten stuurt Switch Multilevel Stop Level Change."
+        }
+      }
+    }
+  }
+}

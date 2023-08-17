@@ -1,0 +1,226 @@
+[
+  {
+    "id": "save_state",
+    "value": "0",
+    "label": {
+      "en": "Restore state after power failure",
+      "nl": "Herstel status na stroomonderbreking"
+    },
+    "hint": {
+      "en": "This parameter ({{zwaveParameterIndex}}) determines whether after a power failure the device should be restored to the state it had before the power failure.",
+      "nl": "Deze parameter ({{zwaveParameterIndex}}) bepaalt of het apparaat na een stroomonderbreking moet worden ingesteld zoals deze voor de stroomonderbreking stond ingesteld."
+    },
+    "zwave": {
+      "index": 1,
+      "size": 1
+    },
+    "values": [
+      {
+        "id": "0",
+        "label": {
+          "en": "Turn off light (default)",
+          "nl": "Schakel de lamp uit (standaard)"
+        }
+      },
+      {
+        "id": "1",
+        "label": {
+          "en": "Turn on light",
+          "nl": "Schakel de lamp in"
+        }
+      },
+      {
+        "id": "2",
+        "label": {
+          "en": "Restore state before power failure",
+          "nl": "Herstel toestand van voor stroomonderbreking"
+        }
+      }
+    ],
+    "type": "dropdown"
+  },
+  {
+    "id": "report_state",
+    "value": "1",
+    "label": {
+      "en": "Report state change",
+      "nl": "Rapporteer toestandswijziging"
+    },
+    "hint": {
+      "en": "This parameter ({{zwaveParameterIndex}}) determines when the dimmer sends a report  when the status of Dimmer load is changed.",
+      "nl": "Deze parameter ({{zwaveParameterIndex}}) bepaalt wanneer de dimmer een rapport stuurt wanneer de belasting van de dimmer is veranderd."
+    },
+    "zwave": {
+      "index": 2,
+      "size": 1
+    },
+    "values": [
+      {
+        "id": "0",
+        "label": {
+          "en": "Disabled",
+          "nl": "Uitgeschakeld"
+        }
+      },
+      {
+        "id": "1",
+        "label": {
+          "en": "Send Switch Multilevel Report for all state changes (default)",
+          "nl": "Stuur Switch Multilevel Report voor alle toestandswijzigingen (standaard)"
+        }
+      },
+      {
+        "id": "2",
+        "label": {
+          "en": "Send Switch Multilevel Report only when state changed on device itself",
+          "nl": "Stuur Switch Multilevel Report enkel voor toestandswijzigingen vanuit de dimmer zelf"
+        }
+      }
+    ],
+    "type": "dropdown"
+  },
+  {
+    "id": "dim_duration",
+    "type": "number",
+    "zwave": {
+      "index": 3,
+      "size": 1
+    },
+    "label": {
+      "en": "Dim duration",
+      "nl": "Dim duur"
+    },
+    "units": {
+      "en": "s",
+      "nl": "s"
+    },
+    "value": 5,
+    "attr": {
+      "min": 1,
+      "max": 100,
+      "step": 1
+    },
+    "hint": {
+      "en": "This setting determines the time (in seconds) it takes to move between the maximum and minimum dim values when controlled via Homey.",
+      "nl": "Deze in bepaalt de tijd (in seconden) die nodig is voor het dimmen van het maximale naar het minimale dim niveau wanneer aangestuurd via Homey."
+    }
+  },
+  {
+    "id": "external_switch_inclusion",
+    "value": "0",
+    "label": {
+      "en": "Inclusion mode",
+      "nl": "Toevoegmodus"
+    },
+    "hint": {
+      "en": "This parameter ({{zwaveParameterIndex}}) determines the option to use an external switch to include or exclude the device from the network.",
+      "nl": "Deze parameter ({{zwaveParameterIndex}}) schakelt de optie in om een externe schakelaar te gebruiken om de dimmer toe te voegen of te verwijderen uit het netwerk."
+    },
+    "zwave": {
+      "index": 5,
+      "size": 1
+    },
+    "values": [
+      {
+        "id": "0",
+        "label": {
+          "en": "Reset button only (default)",
+          "nl": "Enkel reset knop (standaard)"
+        }
+      },
+      {
+        "id": "1",
+        "label": {
+          "en": "External knob + reset button",
+          "nl": "Externe knop + reset button"
+        }
+      }
+    ],
+    "type": "dropdown"
+  },
+  {
+    "id": "dim_curve",
+    "value": "0",
+    "label": {
+      "en": "Dim curve",
+      "nl": "Dim curve"
+    },
+    "hint": {
+      "en": "This parameter ({{zwaveParameterIndex}}) determines the dimming behaviour (linear or logarithmic) of the dimmer.",
+      "nl": "Deze parameter ({{zwaveParameterIndex}}) bepaalt het dim gedrag (lineair of logaritmisch) van de dimmer."
+    },
+    "zwave": {
+      "index": 6,
+      "size": 1
+    },
+    "values": [
+      {
+        "id": "0",
+        "label": {
+          "en": "Linear dimming (default)",
+          "nl": "Lineair dimmen (standaard)"
+        }
+      },
+      {
+        "id": "1",
+        "label": {
+          "en": "Logarithmic dimming",
+          "nl": "Logaritmisch dimmen"
+        }
+      }
+    ],
+    "type": "dropdown"
+  },
+  {
+    "id": "default_brightness",
+    "type": "number",
+    "zwave": {
+      "index": 7,
+      "size": 1
+    },
+    "label": {
+      "en": "Brightness at turning on",
+      "nl": "Helderheid bij inschakelen"
+    },
+    "units": {
+      "en": "%",
+      "nl": "%"
+    },
+    "value": 0,
+    "attr": {
+      "min": 0,
+      "max": 99,
+      "step": 1
+    },
+    "hint": {
+      "en": "This parameter ({{zwaveParameterIndex}}) determines the default brightness when turn on the dimmer from off status. Setting of 0 means that the dimmer will use parameter 1.",
+      "nl": "Deze parameter ({{zwaveParameterIndex}}) bepaalt de helderheid na inschakelen van de dimmer vanuit uit toestand. De waarde 0 zorgt ervoor dat de dimmer parameter 1 gebruikt."
+    }
+  },
+  {
+    "id": "off_delay",
+    "type": "number",
+    "zwave": {
+      "index": 8,
+      "size": 1
+    },
+    "label": {
+      "en": "Turn off delay time",
+      "nl": "Uitschakel vertraging"
+    },
+    "units": {
+      "en": "s",
+      "nl": "s"
+    },
+    "value": 0,
+    "attr": {
+      "min": 1,
+      "max": 60,
+      "step": 1
+    },
+    "hint": {
+      "en": "This parameter ({{zwaveParameterIndex}}) determines the delay time (in seconds) when turning off the dimmer.",
+      "nl": "Deze parameter ({{zwaveParameterIndex}}) bepaalt de vertragingstijd (in seconden) na het uitschakelen van de dimmer."
+    }
+  }
+]

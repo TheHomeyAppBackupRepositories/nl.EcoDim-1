@@ -1,0 +1,62 @@
+{
+  "id": "eco-dim07-zigbee",
+  "name": {
+    "en": "Dimmer Zigbee"
+  },
+  "class": "light",
+  "capabilities": [
+    "dim",
+    "onoff"
+  ],
+  "capabilitiesOptions": {
+		"onoff": {
+			"setOnDim": false
+		},
+		"dim": {
+			"opts": {
+				"duration": true
+			}
+		}
+	},
+  "energy": {
+    "approximation": {
+      "usageOn": 0,
+      "usageOff": 0
+    }
+  },
+  "images": {
+    "large": "{{driverAssetsPath}}/images/large.png",
+    "small": "{{driverAssetsPath}}/images/small.png"
+  },
+  "platforms": [ "local", "cloud" ],
+  "connectivity": [ "zigbee" ],
+  "zigbee": {
+    "manufacturerName": ["EcoDim BV", "EcoDim B.V", "EcoDim B.V.", "Ember", "abcd", "Shyugj"],
+    "productId": ["Dimmer-Switch-ZB3.0", "EcoDim-Zigbee 3.0"],
+    "endpoints": {
+      "1": {
+       "clusters": [
+         0,
+         3,
+         4,
+         5,
+         6,
+         8,
+         2821,
+         4096
+       ],
+       "bindings": [
+         6,
+         8
+       ]
+     }
+   },
+    "learnmode": {
+      "image": "{{driverAssetsPath}}/learnmode.svg",
+      "instruction": {
+        "en": "To set the dimmer into inclusion mode:\n1. Press the RESET button twice. \nThe LED will start blinking indicating that the inclusion mode is activated.\n Once inclusion is succesfull, the LED stop blinking, turn on for a few seconds and turn off",
+        "nl": "Om de dimmer in toevoeg modus te zetten: \n1. Druk de RESET knop twee keer in. \nDe LED knippert en de inclusion modus is ingeschakeld. \nWanneer het toevoegen succesvol is afgerond, stopt de LED met knipperen, staat aan voor enkele seconden en gaat vervolgens uit."
+      }
+    }
+  }
+}

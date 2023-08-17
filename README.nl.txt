@@ -1,0 +1,1 @@
+EcoDim levert een groot assortiment aan LED dimmers bekend voor de uitstekende dimbaarheid en stabiliteit (MIN en MAX instelbaar) die geschikt zijn voor alle bekende merken afdekmateriaal. Geschikt voor 90% van alle (normaal) dimbare LED lampen.

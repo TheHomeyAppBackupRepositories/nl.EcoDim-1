@@ -1,0 +1,65 @@
+{
+	"id": "ED-10012",
+	"name": {
+		"en": "Wall controller Zigbee 2 groups",
+		"nl": "Draadloze schakelaar Zigbee 2 groepen"
+	},
+	"icon": "{{driverAssetsPath}}/icon.svg",
+	"images": {
+		"large": "{{driverAssetsPath}}/images/large.png",
+		"small": "{{driverAssetsPath}}/images/small.png"
+	},
+	"class": "sensor",
+	"capabilities": [
+    "measure_battery",
+    "alarm_battery"
+  ],
+	"energy": {
+		"batteries": [ "CR2450" ]
+	},
+	"platforms": [ "local", "cloud" ],
+	"connectivity": [ "zigbee" ],
+	"zigbee": {
+		"manufacturerName": ["EcoDim", "EcoDim B.V", "EcoDim B.V.", "EcoDim BV"],
+    "productId": ["ED-10012", "ED-10013"],
+		"endpoints": {
+      "1": {
+       "clusters": [
+         0,
+				 1,
+         4,
+         5,
+         6,
+				 8,
+         4096
+       ],
+       "bindings": [
+         6,
+				 8
+       ]
+		 },
+		 "2": {
+			"clusters": [
+				0,
+				1,
+				4,
+				5,
+				6,
+				8,
+				4096
+			],
+			"bindings": [
+				6,
+				8
+			]
+		}
+    },
+		"learnmode": {
+			"image": "{{driverAssetsPath}}/learnmode.svg",
+			"instruction": {
+				"en": "To include the wall controller to Homey: \nPress and hold down both buttons I and O of Group 1 (upper rockers) over 3 seconds. \nThe green LED indicator will turn on. \nRelease both buttons and immediately press the O button and the remote will be set to adding mode. \nThe green LED indicator blinking 6 times will indicate successful inclusion.",
+				"nl": "Om de wall controller aan Homey toe te voegen: \n1. Hou beide knoppen I en O van Groep 1 (bovenste knoppen) ingedrukt voor 3 seconden. \nDe groene LED indicator gaat aan. \nLaat beide knoppen los en druk direct op de O knop en de wall controller is in toevoegmodus gezet. \nDe groene LED indicator knippert 6 keer wanneer het toevoegen succesvol is."
+			}
+		}
+  }
+}

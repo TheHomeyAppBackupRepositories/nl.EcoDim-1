@@ -1,0 +1,1 @@
+EcoDim offers a wide range of LED dimers known for their excellent dimmability and light stability (MIN and MAX adjustment) and compatible with all common brands of cover material. Suitable for> 90% of all (normal) dimmable LED lamps.

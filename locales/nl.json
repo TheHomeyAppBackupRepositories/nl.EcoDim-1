@@ -1,0 +1,14 @@
+{
+	"Group1": "Groep 1",
+	"Group2": "Groep 2",
+	"Group3": "Groep 3",
+	"Group4": "Groep 4",
+	"Switched ON": "Ingeschakeld",
+	"Switched OFF": "Uitgeschakeld",
+	"Dimming UP": "Dim omhoog / Langdurig ingedrukt (omhoog)",
+	"Dimming DOWN": "Dim omlaag / Langdurig ingedrukt (omlaag)",
+	"Dimming STOP": "Stop dimmen / Losgelaten",
+	"pairing": {
+		"configuring": "Configureren..."
+	}
+}
